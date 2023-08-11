@@ -1,0 +1,171 @@
+.home-main {
+  /* width: 100%; */
+  /* height: 100%; */
+  position: relative;
+}
+
+.rounded-sm {
+  width: 45px;
+  height: 45px;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0px 4px 6px -1px rgba(20, 19, 20, 0.4);
+  position: absolute;
+  top: 0;
+  right: 10px;
+  overflow: hidden;
+  border-radius: 12px;
+  border: none;
+  background: var(--content-sl);
+  z-index: 200;
+}
+
+.rounded-sm::after {
+  content: "";
+  position: absolute;
+  background: var(--content);
+  width: 150%;
+  padding-top: 150%;
+  transition: 0.75s ease;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  border-radius: 999px;
+  top: 300%;
+  z-index: -10;
+}
+
+.radial-in:hover:after {
+  top: 50%;
+}
+
+.rounded svg {
+  z-index: 2;
+}
+
+/* Nabvar */
+
+.overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: auto;
+  display: none;
+}
+
+.overlay svg path {
+  fill: white;
+  /* position: fixed; */
+}
+
+.menu {
+  position: absolute;
+  width: 80vw;
+  height: 80%;
+  display: flex;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.menu > div {
+  height: 100%;
+  display: flex;
+}
+
+.menu a {
+  position: relative;
+  top: 120px;
+  line-height: 70%;
+  text-decoration: none;
+  color: red;
+}
+
+.menu a span {
+  font-size: 20px;
+  margin-right: 2em;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-container {
+  width: 70%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.primary-menu {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.primary-menu .menu-container .wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.primary-menu a {
+  font-size: 125px;
+  font-weight: 500;
+}
+
+@media (max-width: 576px) {
+  .menu > div {
+    width: 100%;
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    z-index: 2;
+  }
+
+  .menu a {
+    font-size: 60px;
+  }
+
+  .overlay {
+    background-color: #d3d0bd;
+    z-index: 0;
+  }
+
+  .overlay svg path {
+    fill: #272525;
+  }
+
+  .primary-menu {
+    flex: none;
+  }
+}
+
+/* De 993px a 1200px (Pantallas de escritorio y laptops) */
+@media (min-width: 993px) and (max-width: 1200px) {
+  .menu {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Más de 1200px (Pantallas grandes) */
+@media (min-width: 1201px) {
+  .menu {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
