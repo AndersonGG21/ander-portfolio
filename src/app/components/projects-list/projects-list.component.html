@@ -1,0 +1,36 @@
+<div class="preview" #preview>
+  <div class="preview-img"></div>
+</div>
+<div class="container">
+  <section class="projects" #projects>
+    <div class="project" id="p1" (mousemove)="moveProject($event)">
+      <div class="client">
+        <p>E-commerce Website Redesign</p>
+      </div>
+      <div class="service">
+        <p>Web Design</p>
+      </div>
+    </div>
+    <div
+      class="project"
+      id="p2"
+      (mousemove)="moveProject($event)"
+      (click)="projectRedirect()"
+    >
+      <div class="client">
+        <p>Mobile App Development</p>
+      </div>
+      <div class="service">
+        <p>App Development</p>
+      </div>
+    </div>
+    <div class="project" id="p3" (mousemove)="moveProject($event)">
+      <div class="client">
+        <p>Brand Identity Refresh</p>
+      </div>
+      <div class="service">
+        <p>Graphic Design</p>
+      </div>
+    </div>
+  </section>
+</div>
