@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Subjectivity";
+  src: url("assets/fonts/Subjectivity-Regular.otf");
+}
+
+@font-face {
+  font-family: "Subjectivity-bold";
+  src: url("assets/fonts/Subjectivity-Bold.otf");
+}
+
+:root {
+  --bg-primary: #151515;
+  --foreground: #ECEDEE;
+  --content: #18181b;
+  --content-sl: #27272a;
+  --secondary: #9353d3;
+}
+
+html {
+  font-family: "Subjectivity";
+  font-size: 25px;
+  background-color: var(--bg-primary);
+  color: #ECEDEE;
+}
