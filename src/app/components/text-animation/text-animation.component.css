@@ -1,0 +1,11 @@
+.animated-p {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--foreground);
+    margin: 0;
+    line-height: 0;
+}
+
+.animated-p:nth-child(5) {
+    color: yellow;
+}

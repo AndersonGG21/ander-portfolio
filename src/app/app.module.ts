@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { MarqueeComponent } from './components/marquee/marquee.component';
 import { ProjectsListComponent } from './components/projects-list/projects-list.component';
+import { TextAnimationComponent } from './components/text-animation/text-animation.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ProjectsListComponent } from './components/projects-list/projects-list.
     AppComponent,
     HomeComponent,
     MarqueeComponent,
-    ProjectsListComponent
+    ProjectsListComponent,
+    TextAnimationComponent
   ],
   imports: [
     BrowserModule,
