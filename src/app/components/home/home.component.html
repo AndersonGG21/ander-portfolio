@@ -1,6 +1,13 @@
 <main class="home-main">
   <header class="home-header">
-    <div class="overlay">
+    <span>© Coded by Anderson</span>
+    <ul>
+      <li class="magnetic magnetic-content" data-dist="2"><a href="">Work</a></li>
+      <li class="magnetic magnetic-content" data-dist="2"><a href="">About</a></li>
+      <li class="magnetic magnetic-content" data-dist="2"><a href="">Contact</a></li>
+    </ul>
+    <div id="menu-backdrop"></div>
+    <!-- <div class="overlay">
       <svg viewBox="0 0 1000 1000">
         <path d="M 0 2 S 175 1 500 1 s 500 1 500 1 V 0 H 0 "></path>
       </svg>
@@ -22,8 +29,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <button
+    </div> -->
+    <!-- <button
       type="button"
       class="magnetic radial-in rounded-sm"
       data-dist="3"
@@ -44,13 +51,12 @@
           fill="var(--foreground)"
         />
       </svg>
-    </button>
-  
-    <div class="personal-image">
-      <app-marquee></app-marquee>
-      <app-text-animation></app-text-animation>
-    </div>
+    </button> -->
   </header>
+  <section class="personal-image">
+    <app-marquee></app-marquee>
+    <app-text-animation></app-text-animation>
+  </section>
   <section class="project-list">
     <app-projects-list></app-projects-list>
   </section>
