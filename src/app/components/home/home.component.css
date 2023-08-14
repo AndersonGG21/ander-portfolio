@@ -1,7 +1,25 @@
+.home-header {
+  /* width: 100vw; */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
 .home-main {
-  /* width: 100%; */
-  /* height: 100%; */
+  height: 100%;
   position: relative;
+}
+
+.personal-image {
+  width: 100vw;
+  height: 100vh;
+  /* background: url("../../../assets/images/wallpaper.png"); */
+  background-color: #918d8d;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .rounded-sm {
@@ -54,6 +72,10 @@
   display: none;
 }
 
+.overlay::-webkit-scrollbar {
+  display: none;
+}
+
 .overlay svg path {
   fill: white;
   /* position: fixed; */
@@ -66,6 +88,7 @@
   display: flex;
   overflow: hidden;
   z-index: 2;
+  justify-content: flex-start;
 }
 
 .menu > div {
@@ -135,12 +158,11 @@
   }
 
   .menu a {
-    font-size: 60px;
+    font-size: 40px;
   }
 
   .overlay {
-    background-color: #d3d0bd;
-    z-index: 0;
+    background-color: #918d8d;
   }
 
   .overlay svg path {
@@ -154,18 +176,14 @@
 
 /* De 993px a 1200px (Pantallas de escritorio y laptops) */
 @media (min-width: 993px) and (max-width: 1200px) {
-  .menu {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+
 }
 
 /* Más de 1200px (Pantallas grandes) */
-@media (min-width: 1201px) {
+/* @media (min-width: 1201px) {
   .menu {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-}
+} */

@@ -6,7 +6,7 @@
 
 .marquee {
   color: --bg-primary;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-weight: 600;
   font-size: max(9em, 15vw);
   padding: 32px 0;
@@ -14,6 +14,7 @@
   align-items: center;
   position: relative;
   overflow: hidden;
+  width: 95vw;
 }
 
 .marquee__inner {
