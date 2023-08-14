@@ -34,8 +34,8 @@ export class ProjectsListComponent implements OnInit {
       const previewRect = this.preview.getBoundingClientRect();
       const offsetX = previewRect.width / 2;
       const offsetY = previewRect.height / 2;
-      this.preview.style.left = e.pageX - offsetX + 'px';
-      this.preview.style.top = e.pageY - offsetY + 'px';
+      this.preview.style.left = e.clientX - offsetX + 'px'
+      this.preview.style.top = e.clientY - offsetY + window.scrollY + 'px'
     }
   }
 
