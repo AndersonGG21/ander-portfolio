@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MarqueeComponent } from './components/marquee/marquee.component';
 import { ProjectsListComponent } from './components/projects-list/projects-list.component';
 import { TextAnimationComponent } from './components/text-animation/text-animation.component';
+import { HomeHeaderComponent } from './components/home-header/home-header.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { TextAnimationComponent } from './components/text-animation/text-animati
     HomeComponent,
     MarqueeComponent,
     ProjectsListComponent,
-    TextAnimationComponent
+    TextAnimationComponent,
+    HomeHeaderComponent
   ],
   imports: [
     BrowserModule,
