@@ -27,9 +27,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/split-text-js/dist/split-text.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
