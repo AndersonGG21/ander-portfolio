@@ -20,6 +20,7 @@
     "@angular/router": "^15.0.0",
     "@types/gsap": "^3.0.0",
     "gsap": "^3.12.2",
+    "mouse-follower": "^1.1.2",
     "rxjs": "~7.5.0",
     "split-text-js": "^1.0.3",
     "tslib": "^2.3.0",
