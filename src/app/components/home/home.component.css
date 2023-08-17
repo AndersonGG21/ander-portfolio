@@ -134,34 +134,7 @@
 }
 
 @media (max-width: 576px) {
-  .menu > div {
-    width: 100%;
-  }
-
-  .menu {
-    position: fixed;
-    top: 0;
-    width: 50%;
-    height: 50%;
-    display: flex;
-    z-index: 2;
-  }
-
-  .menu a {
-    font-size: 40px;
-  }
-
-  .overlay {
-    background-color: #918d8d;
-  }
-
-  .overlay svg path {
-    fill: #272525;
-  }
-
-  .primary-menu {
-    flex: none;
-  }
+  
 }
 
 /* De 993px a 1200px (Pantallas de escritorio y laptops) */
