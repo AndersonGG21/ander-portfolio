@@ -8,7 +8,6 @@ import gsap from 'gsap';
 })
 export class HomeComponent implements OnInit {
   tl = gsap.timeline({ paused: true });
-  path = document.querySelector('path') as SVGPathElement;
 
   ngOnInit(): void {
     const magneticButtons = document.querySelectorAll('.magnetic');
