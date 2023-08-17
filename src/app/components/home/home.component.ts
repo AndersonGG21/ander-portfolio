@@ -13,41 +13,17 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     const magneticButtons = document.querySelectorAll('.magnetic');
     const _this = this;
-    gsap.set('.menu', { visibility: 'hidden' });
-    this.revealMenu();
-
     magneticButtons.forEach(function (elem: any) {
       document.addEventListener('mousemove', (e) => {
         _this.magnetize(elem, e);
       });
     });
-
-    // const listItem = document.querySelectorAll('.home-header li');
-    // const menuBackdrop = document.querySelector('#menu-backdrop') as HTMLDivElement;
-
-    // listItem.forEach((item) => {
-    //   item.addEventListener('mouseenter', ({ target} : any) => {
-    //     const { left, top, width, height } = item.getBoundingClientRect();
-    //     menuBackdrop.style.setProperty("--left", `${left}px`);
-    //     menuBackdrop.style.setProperty("--top", `${top}px`);
-    //     menuBackdrop.style.setProperty("--width", `${width}px`);
-    //     menuBackdrop.style.setProperty("--heigth", `${height}px`);
-    //     console.log(menuBackdrop.style.getPropertyValue("--width"))
-    //     menuBackdrop.style.visibility = 'visible';
-    //     menuBackdrop.style.opacity = '1';
-    //   })
-
-    //   item.addEventListener('mouseleave', () => {
-    //     menuBackdrop.style.visibility = 'hidden';
-    //     menuBackdrop.style.opacity = '0';
-    //   })
-    // })
   }
 
   // Magentic Elements
   magnetize(el: any, e: any) {
-    const mX = e.pageX,
-      mY = e.pageY;
+    const mX = e.clientX,
+      mY = e.clientY;
     const item = el;
     const customDist = item.dataset.dist * 20 || 120;
     const centerX =
@@ -94,77 +70,5 @@ export class HomeComponent implements OnInit {
           )
       )
     );
-  }
-
-  // Menu
-
-  revealMenu() {
-    this.revealMenuItems();
-  }
-
-  start() {
-    let overlay = document.querySelector('.overlay') as HTMLDivElement;
-    overlay.style.display = 'block';
-    const toggleBtn = document.querySelector('#menu-btn') as HTMLButtonElement;
-    // preview.style.display = "none";
-    console.log(toggleBtn)
-
-    toggleBtn.classList.toggle('active');
-    this.tl.reversed(!this.tl.reversed());
-
-    setTimeout(() => {
-      if (!toggleBtn.classList.contains('active')) {
-        overlay.style.display = 'none';
-        // preview.style.display = "block";
-      }
-    }, 2000);
-  }
-
-  revealMenuItems() {
-    const star = 'M0 502S175 272 500 272s500 230 500 230V0H0Z';
-    const end = ' M0,1005S175,995,500,995s500,5,500,5V0H0Z';
-    const path = document.querySelector('path') as SVGPathElement;
-    this.tl
-      .to(
-        path,
-        0.6,
-        {
-          attr: {
-            d: star,
-          },
-          ease: 'power2.easeIn',
-        },
-        '<'
-      )
-      .to(path, 0.6, {
-        attr: {
-          d: end,
-        },
-        ease: 'power2.easeIn',
-      });
-
-    this.tl.to(
-      '.menu',
-      0.4,
-      {
-        visibility: 'visible',
-      },
-      '-=0.3'
-    );
-
-    this.tl
-      .to(
-        '.menu-item a',
-        0.4,
-        {
-          top: 0,
-          ease: 'power3.out',
-          stagger: {
-            amount: 0.5,
-          },
-        },
-        '-=0.35'
-      )
-      .reverse();
   }
 }
