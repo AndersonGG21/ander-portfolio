@@ -22,7 +22,6 @@ export class HomeHeaderComponent implements OnInit{
         menuBackdrop.style.setProperty("--top", `${top}px`);
         menuBackdrop.style.setProperty("--width", `${width}px`);
         menuBackdrop.style.setProperty("--heigth", `${height}px`);
-        console.log(menuBackdrop.style.getPropertyValue("--width"))
         menuBackdrop.style.visibility = 'visible';
         menuBackdrop.style.opacity = '1';
       })
