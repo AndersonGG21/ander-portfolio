@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 @Component({
   selector: 'HomeHeader',
@@ -8,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class HomeHeaderComponent implements OnInit{
   
   ngOnInit(): void {
+    gsap.registerPlugin(ScrollTrigger);
+
     const listItem = document.querySelectorAll('.home-header li');
     const menuBackdrop = document.querySelector('#menu-backdrop') as HTMLDivElement;
 
@@ -28,5 +32,16 @@ export class HomeHeaderComponent implements OnInit{
         menuBackdrop.style.opacity = '0';
       })
     })
+
+    const actionNav = gsap.to('.home-header', {y:'-=60', duration:0.5, ease:'power2.in', display: 'none',paused:true});
+
+    ScrollTrigger.create({
+      trigger: ".home-header",
+      start: "10px top",
+      onEnter: () => actionNav.play(),
+      onLeaveBack: () => actionNav.reverse(),
+    });
   }
+
+  
 }
