@@ -27,3 +27,11 @@ html {
   background-color: var(--bg-primary);
   color: #ECEDEE;
 }
+
+.no-scroll {
+  overflow: hidden;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
