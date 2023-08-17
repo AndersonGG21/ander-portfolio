@@ -64,4 +64,26 @@ export class MenuNavigationComponent implements OnInit{
     button.classList.toggle('active');
     document.body.classList.toggle('no-scroll');
   }
+
+  onMouseEnter(e : MouseEvent){
+    let el = e.target as HTMLDivElement;
+    let { width, height } = el.getBoundingClientRect();
+
+    gsap.to('.cursor', 0.4, {
+      width: width,
+      height: height,
+      borderRadius: '8px',
+      backgroundColor: 'transparent',
+      border: '1px solid #fff',
+    })
+  }
+
+  onMouseLeave(){
+    gsap.to('.cursor', 0.4, {
+      width: '10px',
+      height: '10px',
+      border: 'none',
+      backgroundColor: 'var(--foreground)',
+    })
+  }
 }
