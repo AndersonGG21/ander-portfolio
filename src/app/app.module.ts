@@ -8,6 +8,8 @@ import { MarqueeComponent } from './components/marquee/marquee.component';
 import { ProjectsListComponent } from './components/projects-list/projects-list.component';
 import { TextAnimationComponent } from './components/text-animation/text-animation.component';
 import { HomeHeaderComponent } from './components/home-header/home-header.component';
+import { MenuNavigationComponent } from './components/menu-navigation/menu-navigation.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { HomeHeaderComponent } from './components/home-header/home-header.compon
     MarqueeComponent,
     ProjectsListComponent,
     TextAnimationComponent,
-    HomeHeaderComponent
+    HomeHeaderComponent,
+    MenuNavigationComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
