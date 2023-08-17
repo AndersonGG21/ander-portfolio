@@ -1,0 +1,31 @@
+.cursor, .hand {
+  position: fixed;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: transform .1s;
+}
+
+.cursor {
+  background-color: var(--foreground);
+  top: 0;
+  width: 10px;
+  height: 10px;
+  z-index: 999;
+}
+
+.hand {
+  background: rgb(155, 0, 255);
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  z-index: 999;
+  display: grid;
+  place-content: center;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+.hand svg {
+  width: 40px;
+}
