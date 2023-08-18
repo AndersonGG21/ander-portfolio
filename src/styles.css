@@ -43,7 +43,7 @@ html::-webkit-scrollbar {
   color: var(--secondary);
 }
 
-.h-sm {
+.section-title {
   font-size: 0.55rem;
   color: var(--foreground);
   width: 250px;
