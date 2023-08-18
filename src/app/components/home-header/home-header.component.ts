@@ -42,5 +42,9 @@ export class HomeHeaderComponent implements OnInit{
     });
   }
 
+  scrollTo(el : string){
+    const element = document.querySelector(el) as HTMLElement;
+    element.scrollIntoView({behavior: 'smooth'});
+  }
   
 }

@@ -5,14 +5,13 @@
 }
 
 .marquee {
-  font-weight: 600;
-  font-size: max(9em, 15vw);
-  padding: 32px 0;
+  font-weight: 500;
+  font-size: var(--fontSize);
+  padding: 20px 0;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
-  width: 100%;
 }
 
 .marquee__inner {
@@ -23,7 +22,7 @@
   flex-direction: row;
 }
 
-.divider {
-    width: 50%;
-    height: 50%;
-}
+/* .divider {
+  width: 50%;
+  height: 50%;
+} */
