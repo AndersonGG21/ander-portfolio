@@ -10,6 +10,7 @@ import { TextAnimationComponent } from './components/text-animation/text-animati
 import { HomeHeaderComponent } from './components/home-header/home-header.component';
 import { MenuNavigationComponent } from './components/menu-navigation/menu-navigation.component';
 import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { AboutComponent } from './components/about/about.component';
     TextAnimationComponent,
     HomeHeaderComponent,
     MenuNavigationComponent,
-    AboutComponent
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
