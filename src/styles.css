@@ -15,10 +15,38 @@
 
 :root {
   --bg-primary: #151515;
-  --foreground: #ECEDEE;
+  --foreground: #ecedee;
   --content: #18181b;
   --content-sl: #27272a;
   --secondary: #9353d3;
+}
+
+html {
+  font-family: "Subjectivity";
+  font-size: 25px;
+  background-color: var(--bg-primary);
+  color: #ecedee;
+  scroll-behavior: auto;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.section-number {
+  font-size: 50px;
+  color: var(--secondary);
+}
+
+.h-sm {
+  font-size: 0.55rem;
+  color: var(--foreground);
+  width: 250px;
 }
 
 .rounded-button {
@@ -37,7 +65,7 @@
 .rounded-button::after {
   content: "";
   position: absolute;
-  background: var(--content);
+  background: var(--secondary);
   width: 100%;
   padding-top: 100px;
   transition: 0.75s ease;
@@ -50,33 +78,4 @@
 
 .rounded-button:hover:after {
   top: 50%;
-}
-
-html {
-  font-family: "Subjectivity";
-  font-size: 25px;
-  background-color: var(--bg-primary);
-  color: #ECEDEE;
-  /* scroll-behavior: smooth !important; */
-  scroll-behavior: auto;
-  overflow-x: hidden;
-}
-
-.no-scroll {
-  overflow: hidden;
-}
-
-html::-webkit-scrollbar {
-  display: none;
-}
-
-.h-large {
-  font-size: 50px;
-  color: var(--secondary);
-}
-
-.h-sm {
-  font-size: 0.55rem;
-  color: var(--foreground);
-  width: 250px;
 }
