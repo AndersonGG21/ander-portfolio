@@ -2,31 +2,61 @@
   <div class="preview-img"></div>
 </div>
 <div class="container">
+  <div class="h-large reveal-type" style="align-self: flex-start;">(02)</div>
   <section class="projects" #projects>
-    <div class="project" id="p1" (mousemove)="moveProject($event)">
+    <div class="h-sm">(Projects)</div>
+    <div
+      class="project"
+      id="p1"
+      (mousemove)="moveProject($event)"
+      (mouseenter)="onMouseEnter()"
+      (mouseleave)="onMouseLeave()"
+    >
       <div class="client">
-        <p>E-commerce Website Redesign</p>
+        <p>SpringNet</p>
       </div>
       <div class="service">
-        <p>Web Design</p>
+        <p>Social Media Web Application</p>
       </div>
     </div>
     <div
       class="project"
       id="p2"
       (mousemove)="moveProject($event)"
-      (click)="projectRedirect()"
+      (click)="projectRedirect('p2')"
+      (mouseenter)="onMouseEnter()"
+      (mouseleave)="onMouseLeave()"
     >
       <div class="client">
-        <p>Mobile App Development</p>
+        <p>Idioom</p>
       </div>
       <div class="service">
-        <p>App Development</p>
+        <p>LMS Web Application</p>
       </div>
     </div>
-    <div class="project" id="p3" (mousemove)="moveProject($event)">
+    <div
+      class="project"
+      id="p3"
+      (mousemove)="moveProject($event)"
+      (mouseenter)="onMouseEnter()"
+      (mouseleave)="onMouseLeave()"
+    >
       <div class="client">
-        <p>Brand Identity Refresh</p>
+        <p>Hardware Industry CRM</p>
+      </div>
+      <div class="service">
+        <p>CRM Web Application</p>
+      </div>
+    </div>
+    <div
+      class="project"
+      id="p4"
+      (mousemove)="moveProject($event)"
+      (mouseenter)="onMouseEnter()"
+      (mouseleave)="onMouseLeave()"
+    >
+      <div class="client">
+        <p>Food App</p>
       </div>
       <div class="service">
         <p>Graphic Design</p>

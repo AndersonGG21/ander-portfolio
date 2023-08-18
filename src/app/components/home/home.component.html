@@ -1,11 +1,18 @@
 <main class="home-main">
-  <MenuNavigation />
-  <HomeHeader />
+  <header>
+    <MenuNavigation />
+    <HomeHeader />
+  </header>
   <section class="personal-image">
-    <app-marquee></app-marquee>
-    <app-text-animation></app-text-animation>
+    <MarqueeText id="test" text="Anderson Garces - " [duration]="40" [fontSize]="200" [opacity]="1"></MarqueeText>
   </section>
-  <section class="project-list">
+  <section class="about" id="about">
+    <About />
+  </section>
+  <section class="project-list" id="projects">
     <app-projects-list></app-projects-list>
   </section>
+  <footer id="contact">
+    <Contact />
+  </footer>
 </main>

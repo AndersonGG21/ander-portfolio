@@ -74,37 +74,6 @@
   color: var(--foreground);
 }
 
-.nav-button {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 1px solid var(--foreground);
-  display: flex;
-  align-items: center;
-  font-size: small;
-  justify-content: center;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.nav-button::after {
-  content: "";
-  position: absolute;
-  background: var(--content);
-  width: 100%;
-  padding-top: 100px;
-  transition: 0.75s ease;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  border-radius: 999px;
-  top: 300%;
-  z-index: -10;
-}
-
-.nav-button:hover:after {
-  top: 50%;
-}
-
 .close-button {
   position: fixed;
   top: 30px;

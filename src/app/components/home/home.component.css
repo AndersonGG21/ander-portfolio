@@ -3,6 +3,10 @@
   position: relative;
 }
 
+.home-main section{
+  margin-bottom: 50px;
+}
+
 .personal-image {
   height: 100vh;
   /* background: url("../../../assets/images/wallpaper.png"); */
@@ -129,6 +133,14 @@
   font-weight: 500;
 }
 
+.about {
+  height: 100vh;
+}
+
+footer {
+  height: 80vh;
+  padding: 20px;
+}
 
 @media (max-width: 576px) {
   
