@@ -35,5 +35,4 @@ export class AppComponent implements OnInit {
     }
     requestAnimationFrame(raf);
   }
-  title = 'Anderson Garces - Portofolio';
 }
