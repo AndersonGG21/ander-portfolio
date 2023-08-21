@@ -1,7 +1,4 @@
-import {
-  Component,
-  OnInit
-} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import gsap from 'gsap';
 import { Elastic } from 'gsap';
 
@@ -13,7 +10,7 @@ import { Elastic } from 'gsap';
 export class ProjectsListComponent implements OnInit {
   preview: HTMLDivElement | null = null;
   isInside = false;
-
+  
   ngOnInit(): void {
     this.preview = document.querySelector('.preview') as HTMLDivElement;
     const projects = document.querySelector('.projects') as HTMLDivElement;
@@ -58,7 +55,7 @@ export class ProjectsListComponent implements OnInit {
 
   movePorjectImg(project: any) {
     const bgPositions = {
-      p1: '0 0',
+      p1: '0 0%',
       p2: '0 33.33%',
       p3: '0 66.66%',
       p4: '0 100%',
@@ -86,33 +83,38 @@ export class ProjectsListComponent implements OnInit {
   }
 
   onMouseEnter() {
-    gsap.set('.cursor', {opacity: 0});
+    gsap.set('.cursor', { opacity: 0 });
     gsap.to('.hand', 1, {
       opacity: 1,
       top: '-20px',
       left: '-20px',
       rotate: 0,
       ease: Elastic.easeOut.config(1, 0.3),
-    })
+    });
   }
 
   onMouseLeave() {
-    gsap.to('.hand', 1,{ 
+    gsap.to('.hand', 1, {
       opacity: 0,
       top: '10px',
       left: '40px',
       rotate: 45,
     });
-    gsap.set('.cursor', {opacity: 1});
+    gsap.set('.cursor', { opacity: 1 });
   }
 
-  handCursor(e : MouseEvent) {
+  handCursor(e: MouseEvent) {
     let mouseX = e.clientX;
     let mouseY = e.clientY;
 
     gsap.to('.hand', 1, {
       x: mouseX,
       y: mouseY,
-    })
+    });
+  }
+
+  scrollTo(el: string) {
+    const element = document.querySelector(el) as HTMLElement;
+    element.scrollIntoView({ behavior: 'smooth' });
   }
 }
