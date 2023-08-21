@@ -28,10 +28,20 @@ html {
   color: #ecedee;
   scroll-behavior: auto;
   overflow-x: hidden;
+  border: none;
 }
 
 html::-webkit-scrollbar {
   display: none;
+}
+
+
+ul {
+  list-style: none;
+}
+
+a {
+  cursor: pointer;
 }
 
 .no-scroll {
@@ -60,6 +70,7 @@ html::-webkit-scrollbar {
   justify-content: center;
   overflow: hidden;
   cursor: pointer;
+  position: relative;
 }
 
 .rounded-button::after {
