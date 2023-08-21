@@ -1,4 +1,4 @@
-.cursor, .hand {
+.cursor, .hand, .project-cursor {
   position: fixed;
   left: 0;
   border-radius: 50%;
@@ -14,7 +14,7 @@
   z-index: 999;
 }
 
-.hand {
+.hand, .project-cursor {
   background: rgb(155, 0, 255);
   top: 50%;
   width: 50px;
@@ -24,6 +24,16 @@
   place-content: center;
   transform: rotate(45deg);
   opacity: 0;
+}
+
+.project-cursor {
+  background: none;
+  border: 1px solid var(--foreground);
+  padding: 5px;
+}
+
+.project-cursor span{
+  font-size: medium;
 }
 
 .hand svg {
