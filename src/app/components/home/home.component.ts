@@ -6,10 +6,10 @@ import gsap from 'gsap';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent{
   tl = gsap.timeline({ paused: true });
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     const magneticButtons = document.querySelectorAll('.magnetic');
     const _this = this;
     magneticButtons.forEach(function (elem: any) {
