@@ -11,6 +11,7 @@ import { HomeHeaderComponent } from './components/home-header/home-header.compon
 import { MenuNavigationComponent } from './components/menu-navigation/menu-navigation.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ProjectsSectionsComponent } from './components/projects-sections/projects-sections.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ContactComponent } from './components/contact/contact.component';
     HomeHeaderComponent,
     MenuNavigationComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    ProjectsSectionsComponent
   ],
   imports: [
     BrowserModule,
