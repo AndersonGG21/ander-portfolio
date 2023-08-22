@@ -12,6 +12,7 @@ import { MenuNavigationComponent } from './components/menu-navigation/menu-navig
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ProjectsSectionsComponent } from './components/projects-sections/projects-sections.component';
+import { ProjectPageComponent } from './components/project-page/project-page.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ProjectsSectionsComponent } from './components/projects-sections/projec
     MenuNavigationComponent,
     AboutComponent,
     ContactComponent,
-    ProjectsSectionsComponent
+    ProjectsSectionsComponent,
+    ProjectPageComponent
   ],
   imports: [
     BrowserModule,
