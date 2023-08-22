@@ -1,6 +1,5 @@
 .marquee__part {
   flex-shrink: 0;
-  padding: 0 4px;
   font-smooth: always;
 }
 
