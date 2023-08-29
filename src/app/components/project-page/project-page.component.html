@@ -2,18 +2,18 @@
   <div style="z-index: 99">
     <MarqueeText
       [fontSize]="120"
-      text="{{project.name}}"
+      text="{{ project.name }}"
       [duration]="60"
       [opacity]="1"
       id="project-title-marquee"
       class="marquee-text"
     ></MarqueeText>
   </div>
-  <img src="{{project.mockupImage}}" alt="" />
+  <img src="{{ project.mockupImage }}" alt="" />
   <div style="z-index: -1">
     <MarqueeText
       [fontSize]="120"
-      text="{{project.name}}"
+      text="{{ project.name }}"
       [duration]="60"
       [opacity]="1"
       id="project-title-marquee-2"
@@ -22,58 +22,47 @@
   </div>
   <div class="tags-container">
     <div class="tags">
-        <div class="small-tag">
-            technologies
-        </div>
-        <ul>
-            <li *ngFor="let tech of project.technologies">
-                {{tech}}
-            </li>
-        </ul>
+      <div class="small-tag">technologies</div>
+      <ul>
+        <li *ngFor="let tech of project.technologies">
+          {{ tech }}
+        </li>
+      </ul>
     </div>
     <div class="tags">
-        <div class="small-tag">
-            industry
-        </div>
-        <ul>
-            <li>{{project.industry}}</li>
-        </ul>
+      <div class="small-tag">industry</div>
+      <ul>
+        <li>{{ project.industry }}</li>
+      </ul>
     </div>
     <div class="tags">
-        <div class="small-tag">
-            year
-        </div>
-        <ul>
-            <li>{{project.year}}</li>
-        </ul>
+      <div class="small-tag">year</div>
+      <ul>
+        <li>{{ project.year }}</li>
+      </ul>
     </div>
   </div>
 </section>
 <section class="project-info">
-    <h1>OVERVIEW</h1>
-    <div>
-        <p>{{project.overview}}</p>
-    </div>
+  <h1>OVERVIEW</h1>
+  <div>
+    <p>{{ project.overview }}</p>
+  </div>
 </section>
 <div class="image-grid">
-    
-        <div class="reveal image-grid-col-2">
-            <img src="{{project.images[0]}}" alt="Project Image">
-        </div>
-        <div class="reveal image-grid-col-2 image-grid-row-2">
-            <img src="{{project.images[1]}}" alt="Project Image">
-        </div>
-        <div class="reveal image-grid-col-2">
-            <img src="{{project.images[2]}}" alt="Project Image">
-        </div>
-        <div class="reveal image-grid-col-2">
-            <img src="{{project.images[3]}}" alt="Project Image">
-        </div>
-        <div class="reveal image-grid-col-2" *ngIf="project.images.length == 4">
-            <img src="{{project.images[4]}}" alt="Project Image">
-        </div>
-
+  <div class="reveal image-grid-col-2">
+    <img src="{{ project.images[0] }}" alt="Project Image" />
+  </div>
+  <div class="reveal image-grid-col-2 image-grid-row-2">
+    <img src="{{ project.images[1] }}" alt="Project Image" />
+  </div>
+  <div class="reveal image-grid-col-2">
+    <img src="{{ project.images[2] }}" alt="Project Image" />
+  </div>
+  <div class="reveal image-grid-col-2">
+    <img src="{{ project.images[3] }}" alt="Project Image" />
+  </div>
+  <div class="reveal image-grid-col-2" *ngIf="project.images.length == 5">
+    <img src="{{ project.images[4] }}" alt="Project Image" />
+  </div>
 </div>
-
-
-
