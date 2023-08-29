@@ -125,4 +125,8 @@ export class ProjectsSectionsComponent {
       y: mouseY,
     });
   }
+
+  redirectTo(id : string) {
+    window.location.href = `/work/${id}`;
+  }
 }
