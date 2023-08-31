@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -8,6 +9,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
   styleUrls: ['./menu-navigation.component.css']
 })
 export class MenuNavigationComponent implements OnInit{
+
+  private router = inject(Router);
 
   ngOnInit(): void {
     gsap.registerPlugin(ScrollTrigger);
@@ -35,7 +38,7 @@ export class MenuNavigationComponent implements OnInit{
     const preview = document.querySelector(".preview") as HTMLDivElement;
     
     if (!button.classList.contains("active")) {
-      preview.style.display = "none";
+      // preview.style.display = "none";
       tl.to(overlay, {duration: 0.2, opacity: 0.5})
       tl.to(overlay, {duration: 0.2, opacity: 1,display: "flex"})
       tl.to(menu, { duration: 0.5, x: "-50px"})
@@ -57,7 +60,7 @@ export class MenuNavigationComponent implements OnInit{
       tl.to(menu, { duration: 0.5, x: "50px"})
       tl.to(overlay, {duration: 0.2, opacity: 0.5})
       tl.to(overlay, {duration: 0.2, opacity: 0,display: "none"})
-      preview.style.display = "block";
+      // preview.style.display = "block";
     }
 
     tl.play();
@@ -87,9 +90,21 @@ export class MenuNavigationComponent implements OnInit{
     })
   }
 
+  // scrollTo(el : string){
+    
+  //   const element = document.querySelector(el) as HTMLElement;
+  //   element.scrollIntoView({behavior: 'smooth'});
+  //   this.toggleMenu();
+  // }
+
   scrollTo(el : string){
     const element = document.querySelector(el) as HTMLElement;
-    element.scrollIntoView({behavior: 'smooth'});
+    if (this.router.url != `/home${'#projects' || '#about' || '#contact'}`) {
+      this.router.navigateByUrl(`/home#${element.id}`);
+      console.log(this.router.url)
+    }else{
+      element.scrollIntoView({behavior: 'smooth'});  
+    }    
     this.toggleMenu();
   }
 }

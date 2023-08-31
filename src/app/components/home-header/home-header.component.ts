@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -9,6 +10,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 })
 export class HomeHeaderComponent implements OnInit{
   
+  private router = inject(Router);
   ngOnInit(): void {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -36,15 +38,20 @@ export class HomeHeaderComponent implements OnInit{
 
     ScrollTrigger.create({
       trigger: ".home-header",
-      start: "10px top",
+      start: "10px",
       onEnter: () => actionNav.play(),
       onLeaveBack: () => actionNav.reverse(),
     });
   }
 
   scrollTo(el : string){
-    const element = document.querySelector(el) as HTMLElement;
-    element.scrollIntoView({behavior: 'smooth'});
+    if (this.router.url != `/home${'#projects' || '#about' || '#contact'}`) {
+      this.router.navigateByUrl('/home#projects');
+      console.log(this.router.url)
+    }else{
+      const element = document.querySelector(el) as HTMLElement;
+      element.scrollIntoView({behavior: 'smooth'});  
+    }    
   }
   
 }
