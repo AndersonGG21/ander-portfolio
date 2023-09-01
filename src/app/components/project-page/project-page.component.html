@@ -49,20 +49,58 @@
     <p>{{ project.overview }}</p>
   </div>
 </section>
-<div class="image-grid">
-  <div class="reveal image-grid-col-2">
-    <img src="{{ project.images[0] }}" alt="Project Image" />
-  </div>
-  <div class="reveal image-grid-col-2 image-grid-row-2">
-    <img src="{{ project.images[1] }}" alt="Project Image" />
-  </div>
-  <div class="reveal image-grid-col-2">
-    <img src="{{ project.images[2] }}" alt="Project Image" />
-  </div>
-  <div class="reveal image-grid-col-2">
-    <img src="{{ project.images[3] }}" alt="Project Image" />
-  </div>
-  <div class="reveal image-grid-col-2" *ngIf="project.images.length == 5">
-    <img src="{{ project.images[4] }}" alt="Project Image" />
-  </div>
+<div class="reveal">
+  <img src="{{ project.images[0] }}" alt="Project Image" />
 </div>
+<footer class="project-footer">
+  <a
+    class="rounded-button magnetic sm"
+    data-dist="3"
+    href="{{ project.github[0] }}"
+    target="_blank"
+    ><svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="icon icon-tabler icon-tabler-external-link"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="#ffffff"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+      <path d="M11 13l9 -9" />
+      <path d="M15 4h5v5" />
+    </svg>
+    Front</a
+  >
+  <h4>Source Code</h4>
+  <a
+    class="rounded-button magnetic sm"
+    data-dist="3"
+    href="{{ project.github[1] }}"
+    target="_blank"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="icon icon-tabler icon-tabler-external-link"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="#ffffff"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+      <path d="M11 13l9 -9" />
+      <path d="M15 4h5v5" />
+    </svg>
+    Back
+  </a>
+</footer>
