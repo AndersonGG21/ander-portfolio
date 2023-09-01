@@ -2,6 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { MagnetizeElementsService } from 'src/app/services/magnetize-elements.service';
 
 @Component({
   selector: 'MenuNavigation',
@@ -11,6 +12,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 export class MenuNavigationComponent implements OnInit{
 
   private router = inject(Router);
+  private magneticService = inject(MagnetizeElementsService);
 
   ngOnInit(): void {
     gsap.registerPlugin(ScrollTrigger);
@@ -28,6 +30,8 @@ export class MenuNavigationComponent implements OnInit{
         closeButton.play();
         document.body.classList.toggle('no-scroll');
     }
+
+    this.magneticService.magnet();
   }
 
   toggleMenu() {
@@ -100,8 +104,7 @@ export class MenuNavigationComponent implements OnInit{
   scrollTo(el : string){
     const element = document.querySelector(el) as HTMLElement;
     if (this.router.url != `/home${'#projects' || '#about' || '#contact'}`) {
-      this.router.navigateByUrl(`/home#${element.id}`);
-      console.log(this.router.url)
+      this.router.navigateByUrl(`/home${el}`);
     }else{
       element.scrollIntoView({behavior: 'smooth'});  
     }    
