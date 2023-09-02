@@ -14,6 +14,11 @@ export class MarqueeComponent implements OnInit {
   @Input() opacity : number = 0;
 
   ngOnInit(): void {
+
+    if (window.innerWidth < 768) {
+      this.fontSize = 90;
+    }
+
     let currentScroll = 0;
     let isScrollingDown = true;
     let marquee = document.querySelector(`#${this.id}`) as HTMLElement
