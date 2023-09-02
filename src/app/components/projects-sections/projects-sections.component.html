@@ -13,22 +13,6 @@
   </div>
     <div class="work-imgs-container">
       <div class="images-container"></div>
-      <div class="project-info">
-        <span>Source code</span>
-        <ul class="project-links">
-          <ng-container *ngFor="let link of project.githubLinks; index as j">
-            <li>
-              <a
-                class="magnetic magnetic-content"
-                href="{{link}}"
-                target="_blank"
-                data-dist="3"
-              >
-            {{project.githubLinks.length == 1 ? 'Code' : j == 0 ? 'Frontend' : 'Backend'}}</a>
-            </li>
-          </ng-container>
-        </ul>
-      </div>
     </div>
     <span class="numeral reveal-type2">0{{ i+1 }}</span>
   </section>
