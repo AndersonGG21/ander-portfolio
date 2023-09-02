@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Power2 } from 'gsap';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { MagnetizeElementsService } from 'src/app/services/magnetize-elements.service';
 
 interface Project {
   id: string;
@@ -13,6 +14,7 @@ interface Project {
   industry: string;
   year: number;
   images: string[];
+  github : string[];
 }
 @Component({
   selector: 'app-project-page',
@@ -21,6 +23,8 @@ interface Project {
 })
 export class ProjectPageComponent implements OnInit {
   private router = inject(ActivatedRoute);
+  private magneticService = inject(MagnetizeElementsService);
+  
   projects: Project[] = [
     {
       id: 'springnet',
@@ -28,52 +32,50 @@ export class ProjectPageComponent implements OnInit {
       mockupImage: '../../../assets/images/spring-mockup.png',
       technologies: ['Springboot', 'Angular', 'MySQL', 'AWS'],
       images: [
-        '../../../assets/images/springnet1.png',
-        '../../../assets/images/springnet2.png',
-        '../../../assets/images/springnet3.png',
-        '../../../assets/images/springnet4.png',
-        '../../../assets/images/springnet5.png',
+        '../../../assets/images/springnet-gallery.png',
       ],
       industry: 'Social Media',
       overview: `SpringNet allows you to create posts and stories, view, comment and like other users' posts, follow or unfollow profiles. It has a chat that works in real time using a websocket connection.
       \n\n
       For the development, I used Spring Boot for the backend, since I have experience in this framework and I feel comfortable working with Java. For the frontend, I decided to use Angular, a technology I've been learning and I'm excited to keep improving.`,
       year: 2023,
+      github: ['https://github.com/AndersonGG21/SpringNet-Front', 'https://github.com/AndersonGG21/SpringNet']
     },
     {
       id: 'idioom',
       name: 'IDIOOM - IDIOOM - IDIOOM -',
-      mockupImage: '../../../assets/images/spring-mockup.png',
+      mockupImage: '../../../assets/images/idioom-mockup.png',
       technologies: ['Springboot', 'JavaScipt', 'MySQL'],
       images: [
-        '../../../assets/images/springnet1.png',
-        '../../../assets/images/springnet2.png',
-        '../../../assets/images/springnet3.png',
-        '../../../assets/images/springnet4.png',
-        '../../../assets/images/springnet5.png',
+        '../../../assets/images/idioom1.webp',
+        '../../../assets/images/idioom2.webp',
+        '../../../assets/images/idioom3.webp',
+        '../../../assets/images/idioom4.webp'
       ],
-      industry: 'Eduaction',
+      industry: 'Education',
       overview: `<p>SpringNet allows you to create posts and stories, view, comment and like other users' posts, follow or unfollow profiles. It has a chat that works in real time using a websocket connection.
       </p>
       <br>
       <p>For the development, I used Spring Boot for the backend, since I have experience in this framework and I feel comfortable working with Java. For the frontend, I decided to use Angular, a technology I've been learning and I'm excited to keep improving.
       </p>`,
       year: 2022,
+      github: ['https://github.com/AndersonGG21/SpringNet-Front', 'https://github.com/AndersonGG21/SpringNet']
     },
     {
       id: 'crm',
-      name: 'CRM',
+      name: 'CRM - CRM - CRM -',
       mockupImage: '../../../assets/images/spring-mockup.png',
       technologies: ['Springboot', 'JavaScipt', 'MySQL'],
       images: [
-        '../../../assets/images/springnet1.png',
-        '../../../assets/images/springnet2.png',
-        '../../../assets/images/springnet3.png',
-        '../../../assets/images/springnet4.png',
+        '../../../assets/images/crm1.png',
+        '../../../assets/images/crm2.png',
+        '../../../assets/images/crm3.png',
+        '../../../assets/images/crm4.png',
       ],
       industry: '',
-      overview: 'LMS',
+      overview: 'CRM',
       year: 2021,
+      github: ['https://github.com/AndersonGG21/SpringNet-Front', 'https://github.com/AndersonGG21/SpringNet']
     },
     {
       id: 'food',
@@ -92,6 +94,7 @@ export class ProjectPageComponent implements OnInit {
       /n
       For the development, I used Spring Boot for the backend, since I have experience in this framework and I feel comfortable working with Java. For the frontend, I decided to use Angular, a technology I've been learning and I'm excited to keep improving.`,
       year: 2021,
+      github: ['https://github.com/AndersonGG21/SpringNet-Front', 'https://github.com/AndersonGG21/SpringNet']
     },
   ];
 
@@ -104,6 +107,7 @@ export class ProjectPageComponent implements OnInit {
     industry: '',
     year: 0,
     images: [],
+    github: []
   };
 
   ngOnInit() {
@@ -115,6 +119,8 @@ export class ProjectPageComponent implements OnInit {
         this.project = project;
       }
     });
+
+    this.magneticService.magnet();
   }
 
   ngAfterViewInit() {
@@ -154,5 +160,22 @@ export class ProjectPageComponent implements OnInit {
         ease: Power2.easeOut
       })
     })
+
+    const bgColors = {
+      springnet: '#19A947',
+      idioom: 'rgb(217, 4, 41)',
+      crm: 'rgb(67, 84, 111)',
+      food: 'rgb(37, 37, 37)'
+    }
+
+    const element = document.querySelector('.project-title') as HTMLDivElement;
+    const title = document.querySelector('.project-info h1') as HTMLTitleElement;
+    let projectId = this.project.id as keyof typeof bgColors;
+    element.style.setProperty('--bg-color',`${bgColors[projectId]}`);
+    title.style.setProperty('--bg-color',`${bgColors[projectId]}`);
+  }
+
+  scrollToTop(){
+    window.scrollTo(0,0);
   }
 }
