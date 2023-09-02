@@ -61,9 +61,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  /* background: var(--content); */
-  /* border-top-left-radius: 1.5em;
-  border-top-right-radius: 1.5em; */
   padding: 20px;
 }
 
