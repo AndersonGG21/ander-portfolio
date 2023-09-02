@@ -34,20 +34,19 @@ export class HomeHeaderComponent implements OnInit{
       })
     })
 
-    const actionNav = gsap.to('.home-header', {y:'-=60', duration:0.5, ease:'power2.in', display: 'none',paused:true});
+    const actionNav = gsap.to('.home-header', {y:'-=60', duration:0.2, ease:'power2.in', display: 'none',paused:true});
 
     ScrollTrigger.create({
       trigger: ".home-header",
-      start: "10px",
+      start: "100px",
       onEnter: () => actionNav.play(),
       onLeaveBack: () => actionNav.reverse(),
     });
   }
 
   scrollTo(el : string){
-    if (this.router.url != `/home${'#projects' || '#about' || '#contact'}`) {
-      this.router.navigateByUrl('/home#projects');
-      console.log(this.router.url)
+    if (this.router.url != `/home` && this.router.url != `/home${'#project' || '#contact' || '#about'}`) {
+      this.router.navigateByUrl(`/home${el}`);
     }else{
       const element = document.querySelector(el) as HTMLElement;
       element.scrollIntoView({behavior: 'smooth'});  
