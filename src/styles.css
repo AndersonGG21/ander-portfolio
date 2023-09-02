@@ -18,7 +18,12 @@
   --foreground: #ecedee;
   --content: #18181b;
   --content-sl: #27272a;
-  --secondary: #9353d3;
+  --purple: #9353d3;
+  --green: #19A947;
+  --red: #D90429;
+  --grey : #43546F;
+  --l-black: #252525;
+  --blue: #002e62;
 }
 
 html {

@@ -71,17 +71,17 @@
 }
 
 .project:nth-child(1) {
-  background: #19A947;
+  background: var(--green);
 }
 
 .project:nth-child(2) {
-  background-color: rgb(217, 4, 41);;
+  background: var(--red);
 }
 
 .project:nth-child(3) {
-    background-color: rgb(67, 84, 111);
+    background: var(--grey)
 }
 
 .project:nth-child(4) {
-    background-color: rgb(37, 37, 37);
+    background: var(--l-black);
 }

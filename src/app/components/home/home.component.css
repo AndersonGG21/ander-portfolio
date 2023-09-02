@@ -21,7 +21,7 @@
   width: 100vw;
   border-top-left-radius: 1.5em;
   border-top-right-radius: 1.5em;
-  background-color: #002e62;
+  background-color: var(--blue);
 }
 
 footer {

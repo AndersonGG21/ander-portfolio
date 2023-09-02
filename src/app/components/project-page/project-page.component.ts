@@ -83,10 +83,10 @@ export class ProjectPageComponent implements OnInit {
     })
 
     const bgColors = {
-      springnet: '#19A947',
-      idioom: 'rgb(217, 4, 41)',
-      crm: 'rgb(67, 84, 111)',
-      food: 'rgb(37, 37, 37)'
+      springnet: 'var(--green)',
+      idioom: 'var(--red)',
+      crm: 'var(--grey)',
+      food: 'var(--l-black)'
     }
 
     const element = document.querySelector('.project-title') as HTMLDivElement;
