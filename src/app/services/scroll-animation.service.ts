@@ -21,12 +21,15 @@ export class ScrollAnimationService {
     });
   }
 
-  applyRevealTypeAnimationV2(element: HTMLElement, id : string) {
-    const text = new SplitTextJS(element);
+  applyRevealTypeAnimationV2() {
+    const elements = document.querySelectorAll('.reveal-type2') as NodeListOf<HTMLElement>;
+
+    elements.forEach(element => {
+      let text = new SplitTextJS(element);
     gsap
       .timeline({
         scrollTrigger: {
-          trigger: `#${id}`,
+          trigger: element,
           start: 'center bottom',
         },
       })
@@ -38,5 +41,6 @@ export class ScrollAnimationService {
         stagger: 0.1,
         delay: 0.2,
       });
+    });
   }
 }
