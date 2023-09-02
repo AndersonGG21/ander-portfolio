@@ -6,6 +6,14 @@
   line-height: 0;
 }
 
-.animated-p:nth-child(5) {
-  color: yellow;
+.animated-p:nth-child(1) {
+  color: var(--purple);
+}
+
+.animated-p:nth-child(2) {
+  color: var(--red);
+}
+
+.animated-p:last-child {
+  color: var(--green);
 }

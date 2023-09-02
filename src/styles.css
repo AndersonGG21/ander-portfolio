@@ -55,7 +55,7 @@ a {
 
 .section-number {
   font-size: 50px;
-  color: var(--secondary);
+  color: var(--blue);
 }
 
 .section-title {
@@ -86,7 +86,7 @@ a {
 .rounded-button::after {
   content: "";
   position: absolute;
-  background: var(--secondary);
+  background: var(--blue);
   width: 100%;
   padding-top: 100px;
   transition: 0.75s ease;
