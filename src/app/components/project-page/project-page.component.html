@@ -75,12 +75,13 @@
       <path d="M11 13l9 -9" />
       <path d="M15 4h5v5" />
     </svg>
-    Front</a
+    {{ project.github.length == 1 ? 'Code' : 'Front'}}</a
   >
   <h4>Source Code</h4>
   <a
     class="rounded-button magnetic sm"
     data-dist="3"
+    *ngIf="project.github[1]"
     href="{{ project.github[1] }}"
     target="_blank"
   >
