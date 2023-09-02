@@ -103,7 +103,7 @@ export class MenuNavigationComponent implements OnInit{
 
   scrollTo(el : string){
     const element = document.querySelector(el) as HTMLElement;
-    if (this.router.url != `/home${'#projects' || '#about' || '#contact'}`) {
+    if (this.router.url != `/home${'#projects' || '#about' || '#contact' || '#home'}`) {
       this.router.navigateByUrl(`/home${el}`);
     }else{
       element.scrollIntoView({behavior: 'smooth'});  
