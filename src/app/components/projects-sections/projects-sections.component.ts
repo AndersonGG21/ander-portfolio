@@ -90,9 +90,9 @@ export class ProjectsSectionsComponent {
       let el = document.querySelector(`#${project.id}`) as HTMLElement;
       el.style.setProperty('--bg-img', `url(assets/images/${project.id}.png)`);
       let text = document.querySelector(`#${project.id} .reveal-type2`) as HTMLElement;
-
-      this.scrollAnimationService.applyRevealTypeAnimationV2(text, project.id);
     });
+
+    this.scrollAnimationService.applyRevealTypeAnimationV2();
   }
 
   onMouseEnter() {
