@@ -45,7 +45,7 @@ export class HomeHeaderComponent implements OnInit{
   }
 
   scrollTo(el : string){
-    if (this.router.url != `/home` && this.router.url != `/home${'#project' || '#contact' || '#about'}`) {
+    if (this.router.url != `/home` && this.router.url != `/home${'#projects' || '#contact' || '#about' || '#home'}`) {
       this.router.navigateByUrl(`/home${el}`);
     }else{
       const element = document.querySelector(el) as HTMLElement;
