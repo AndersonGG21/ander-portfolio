@@ -17,3 +17,15 @@
   text-decoration: none;
   color: var(--foreground);
 }
+
+@media screen and (max-width : 1024px) {
+  .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social-buttons {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}

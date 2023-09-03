@@ -31,3 +31,36 @@
 .about-info {
   margin-top: 20px;
 }
+
+@media screen and (max-width : 1024px) {
+
+  .about-info {
+    margin-top: 5px;
+  }
+
+  .call-to-action {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .call-to-action h2 {
+    font-size: 30px;
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .about-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 0;
+  }
+
+  .text-animation {
+    margin-top: 40px;
+  }
+}

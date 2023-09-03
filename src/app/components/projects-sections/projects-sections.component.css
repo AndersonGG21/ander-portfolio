@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
   z-index: 1;
   cursor: pointer;
   padding: 20px;
@@ -84,4 +83,19 @@
 
 .project:nth-child(4) {
     background: var(--l-black);
+}
+
+@media screen and (max-width : 1024px) {
+  .work-title {
+    font-size: 100px;
+  }
+
+  .project {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .numeral {
+    flex: 0;
+  }
 }
