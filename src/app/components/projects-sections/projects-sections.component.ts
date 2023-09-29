@@ -16,6 +16,7 @@ interface Project {
 })
 export class ProjectsSectionsComponent {
   scrollAnimationService = inject(ScrollAnimationService);
+  mobile = false;
   projects: Project[] = [
     {
       id: 'springnet',
@@ -43,6 +44,7 @@ export class ProjectsSectionsComponent {
   ];
 
   ngAfterViewInit() {
+
     const bgPositions = {
       p1: '0 0%',
       p2: '0 33.33%',

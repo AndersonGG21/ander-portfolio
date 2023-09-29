@@ -7,7 +7,6 @@
   z-index: 1;
   cursor: pointer;
   padding: 20px;
-  gap: 50px;
 }
 
 .numeral {
@@ -85,6 +84,10 @@
     background: var(--l-black);
 }
 
+.mobile {
+  display: none;
+}
+
 @media screen and (max-width : 1024px) {
   .work-title {
     font-size: 100px;
@@ -97,5 +100,9 @@
 
   .numeral {
     flex: 0;
+  }
+
+  .mobile {
+    display: inline;
   }
 }
