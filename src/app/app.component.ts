@@ -10,6 +10,7 @@ import SplitTextJS from 'split-text-js';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
+  __iosNoInertiaSyncTouchLerp: any
 
   ngOnInit(): void {
     gsap.set('.cursor', { xPercent: -50, yPercent: -50 });
@@ -23,7 +24,7 @@ export class AppComponent implements OnInit {
       gsap.to(cursor, 0.5, { x: mouseX, y: mouseY });
     });
 
-    const lenis = new Lenis();
+    const lenis = new Lenis(this.__iosNoInertiaSyncTouchLerp);
 
     lenis.on('scroll', (e: any) => {
       // console.log(e);
