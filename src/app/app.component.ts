@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
       gsap.to(cursor, 0.5, { x: mouseX, y: mouseY });
     });
 
-    const lenis = new Lenis(this.__iosNoInertiaSyncTouchLerp);
+    const lenis = new Lenis();
 
     lenis.on('scroll', (e: any) => {
       // console.log(e);
