@@ -140,7 +140,9 @@
 
 @media (max-width: 576px) {
   .navigation-menu {
-    width: 90%;
+    width: 100%;
+    position: relative;
+    right: -50px;
   }
 
   .nav-button {

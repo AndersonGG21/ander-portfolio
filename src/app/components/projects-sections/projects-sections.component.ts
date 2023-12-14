@@ -41,6 +41,11 @@ export class ProjectsSectionsComponent {
       githubLinks: ['https://github.com/AndersonGG21/food-app'],
       name: 'Food App',
     },
+    {
+      id: 'nuwarecycle',
+      githubLinks: ['https://github.com/luisdavid24/nuwarecycleBack', 'https://github.com/AndersonGG21/nuwarecycle-front'],
+      name: 'NuwaRecycle',
+    },
   ];
 
   ngAfterViewInit() {
