@@ -86,7 +86,8 @@ export class ProjectPageComponent implements OnInit {
       springnet: 'var(--green)',
       idioom: 'var(--red)',
       crm: 'var(--grey)',
-      food: 'var(--l-black)'
+      food: 'var(--l-black)',
+      nuwarecycle: 'var(--orange)'
     }
 
     const element = document.querySelector('.project-title') as HTMLDivElement;

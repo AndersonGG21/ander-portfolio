@@ -71,6 +71,19 @@ export class ProjectsDataService {
       year: 2021,
       github: ['https://github.com/AndersonGG21/food-app']
     },
+    {
+      id: 'nuwarecycle',
+      name: 'NuwaRecycle - NuwaRecycle - NuwaRecycle - NuwaRecycle -',
+      mockupImage: '../../../assets/images/nuwarecycle-mockup.png',
+      technologies: ['Springboot', 'Angular', 'MySQL'],
+      images: [
+        '../../../assets/images/nuwa-gallery.png',
+      ],
+      industry: 'Ecommerce',
+      overview: 'This ecommerce project, developed with Angular and Java, offers an exceptional shopping experience. From its intuitive user interface and dynamic shopping cart to robust security measures in the backend, it fuses the best of both technologies to ensure a smooth and secure shopping journey. Discover the elegance of shopping online with us!',
+      year: 2023,
+      github: ['https://github.com/AndersonGG21/nuwarecycle-front', 'https://github.com/luisdavid24/nuwarecycleBack'],
+    },
   ];
 
   getProjectById(id: string) : (Project | null) {
