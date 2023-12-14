@@ -33,6 +33,19 @@ export class ProjectsDataService {
       github: ['https://github.com/AndersonGG21/SpringNet-Front', 'https://github.com/AndersonGG21/SpringNet']
     },
     {
+      id: 'nuwarecycle',
+      name: 'NuwaRecycle - NuwaRecycle - NuwaRecycle - NuwaRecycle -',
+      mockupImage: '../../../assets/images/nuwarecycle-mockup.png',
+      technologies: ['Springboot', 'Angular', 'MySQL'],
+      images: [
+        '../../../assets/images/nuwa-gallery.png',
+      ],
+      industry: 'Ecommerce',
+      overview: 'This ecommerce project, developed with Angular and Java, offers an exceptional shopping experience. From its intuitive user interface and dynamic shopping cart to robust security measures in the backend, it fuses the best of both technologies to ensure a smooth and secure shopping journey. Discover the elegance of shopping online with us!',
+      year: 2023,
+      github: ['https://github.com/AndersonGG21/nuwarecycle-front', 'https://github.com/luisdavid24/nuwarecycleBack'],
+    },
+    {
       id: 'idioom',
       name: 'IDIOOM - IDIOOM - IDIOOM -',
       mockupImage: '../../../assets/images/idioom-mockup.png',
@@ -70,20 +83,7 @@ export class ProjectsDataService {
       overview: 'This was my first project using Angular and Firebase. I was tasked with creating a food ordering app. The app allows users to order food and add it to their cart. The app also allows users to view their cart and checkout. The app also allows users to login. The app also allows chefs to view the order that users made',
       year: 2021,
       github: ['https://github.com/AndersonGG21/food-app']
-    },
-    {
-      id: 'nuwarecycle',
-      name: 'NuwaRecycle - NuwaRecycle - NuwaRecycle - NuwaRecycle -',
-      mockupImage: '../../../assets/images/nuwarecycle-mockup.png',
-      technologies: ['Springboot', 'Angular', 'MySQL'],
-      images: [
-        '../../../assets/images/nuwa-gallery.png',
-      ],
-      industry: 'Ecommerce',
-      overview: 'This ecommerce project, developed with Angular and Java, offers an exceptional shopping experience. From its intuitive user interface and dynamic shopping cart to robust security measures in the backend, it fuses the best of both technologies to ensure a smooth and secure shopping journey. Discover the elegance of shopping online with us!',
-      year: 2023,
-      github: ['https://github.com/AndersonGG21/nuwarecycle-front', 'https://github.com/luisdavid24/nuwarecycleBack'],
-    },
+    }
   ];
 
   getProjectById(id: string) : (Project | null) {
