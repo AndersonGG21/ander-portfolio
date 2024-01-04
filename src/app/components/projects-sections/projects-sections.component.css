@@ -73,19 +73,21 @@
 }
 
 .project:nth-child(2) {
-  background: var(--red);
+  background: var(--orange);
+  
 }
 
 .project:nth-child(3) {
-    background: var(--grey)
+  background: var(--red);
+    
 }
 
 .project:nth-child(4) {
-    background: var(--l-black);
+  background: var(--grey);  
 }
 
 .project:nth-child(5) {
-  background: var(--orange);
+  background: var(--l-black);
 }
 .mobile {
   display: none;
